@@ -1,4 +1,5 @@
 code_dir=$(pwd)
+
 yum install nginx -y
 
 echo -e "\e[35mRemoving Old Content\e[0m"
