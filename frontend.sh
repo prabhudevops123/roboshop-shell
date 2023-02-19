@@ -23,5 +23,5 @@ cp ${code_dir}/configs/nginx-roboshop.conf /etc/nginx/default.d/roboshop.conf &>
 print_head "Enabling Nginx"
 systemctl enable nginx &>>${log_file}
 
-echo -e "Restart Nginx"
+print_head "Restart Nginx"
 systemctl restart nginx &>>${log_file}
