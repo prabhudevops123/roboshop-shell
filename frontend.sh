@@ -6,6 +6,7 @@ if [$? -eq 0]; then
    echo SUCCESS
 else
   echo FAILURE
+fi
 
 print_head "Removing Old Content"
 rm -rf /usr/share/nginx/html/* &>>${log_file}
@@ -24,6 +25,8 @@ echo $?
 
 print_head "Enabling Nginx"
 systemctl enable nginx &>>${log_file}
+echo $?
 
 print_head "Restart Nginx"
 systemctl restart nginx &>>${log_file}
+echo $?
